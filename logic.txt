@@ -1,0 +1,8 @@
+- ssh ke semua host
+- df -kh
+- cek hostname
+- awk $1 $5
+- di buat itungan used disk
+- if used >= 90%
+- kirim email
+- example for this script : used disknya greater equal  example 20%
