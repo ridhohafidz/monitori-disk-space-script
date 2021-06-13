@@ -1,8 +1,8 @@
 #!/bin/sh
-for server in more /home/ridho/servers-dpk.txt
+for server in `more /home/ridho/servers.txt`
 do
-output=ssh $server df -kh | grep -vE '^Filesystem' | awk '{ print $5 " " $1 }' 
-hostname=ssh $server hostname
+output=`ssh $server df -kh | grep -vE '^Filesystem' | awk '{ print $5 " " $1 }'` 
+hostname=`ssh $server hostname`
 #echo $output
 #echo $hostname
   used=$(echo $output | awk '{ print $1}' | cut -d'%' -f1  )
